@@ -61,3 +61,13 @@ let employee2: Employee = {
         console.log(Date)
     }
 }
+
+
+//Union Type
+function kgToLbs(weight: number | string): number { //putting | in for it to have differnt type, so can be a number or string
+    //narrowing, getting the recommendation method for each type
+    if (typeof weight === 'number') //now this will only recommend method for number
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2; //now this will only recommend method for string
+}
