@@ -71,3 +71,22 @@ function kgToLbs(weight: number | string): number { //putting | in for it to hav
     else
         return parseInt(weight) * 2.2; //now this will only recommend method for string
 }
+
+
+
+
+//Intersection Type, combining multiple tempalte together
+type Draggable = { //template 1
+    drag: () => void
+};
+
+type Resizable = { //template 2
+    resize: () => void;
+}
+
+type UIWidget = Draggable & Resizable; //this combine both template (type alias) with &
+
+let textBox: UIWidget = { //now this will require both drag and resize method
+    drag: () => {},
+    resize: () => {}
+}
