@@ -1,3 +1,11 @@
+type Employee = {
+    readonly id: number,
+    name: string,
+    fax?: number,
+    retire: (date: Date) => void
+}
+
+
 let sales: number = 123_456_789;
 let course: string = "TypeScript";
 let is_published: boolean = true;
@@ -37,6 +45,16 @@ let employee: {
     fax?: number, //adding question mark mean that this is optional and can be provided or not
     retire: (date: Date) => void //this is how to type for function in object, void means return nothing
 } = {
+    id: 1, 
+    name: 'Yixin',
+    retire: (Date) => {
+        console.log(Date)
+    }
+}
+//The code can be messy and will need to be reused everytime when setting a object
+//We can use Type Aliases to have a set of types instead, refer to line 1
+//So now if we can use that template to set our type, using employee 2 as a new example
+let employee2: Employee = {
     id: 1, 
     name: 'Yixin',
     retire: (Date) => {
