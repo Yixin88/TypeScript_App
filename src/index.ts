@@ -99,3 +99,26 @@ let quantity: Quantity = 100; //since we set the type and value to be only 50 or
 
 type Metric = 'cm' | 'inch';
 let metric: Metric = 'cm'; //it works for string as well
+
+
+
+//Optional chaining
+type Customer = {
+    birthday: Date
+}
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null : { birthday: new Date() };
+}
+
+let customer = getCustomer(0);
+//Optional property access operator
+console.log(customer?.birthday); //by adding ? we can say that this line of code will only execute if its not null or undefined
+//otherwise this line of code will return undefined
+
+//Optional element access operator, for array, e.g. if there an array that is null or undefined, the following line of code can be not run by adding ?.
+// customer?.[0] <-- only run if there is something in the array
+
+//Optionl call
+let log: any = null;
+log?.('a'); //this means this line of code will only execute if log is referencing to an actual function
