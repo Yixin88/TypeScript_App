@@ -90,3 +90,12 @@ let textBox: UIWidget = { //now this will require both drag and resize method
     drag: () => {},
     resize: () => {}
 }
+
+
+
+//Literal (exact, specific)
+type Quantity = 50 | 100;
+let quantity: Quantity = 100; //since we set the type and value to be only 50 or 100, we can only set these two values
+
+type Metric = 'cm' | 'inch';
+let metric: Metric = 'cm'; //it works for string as well
