@@ -5,6 +5,7 @@ type Employee = {
     retire: (date: Date) => void
 }
 
+//------------------------------------------------------------------------//
 
 let sales: number = 123_456_789;
 let course: string = "TypeScript";
@@ -17,12 +18,16 @@ let user: [number, string] = [1, 'Yixin']; //tuple
 user.push(2); //Typescript will not check the push method !!could cause error
 
 
+//------------------------------------------------------------------------//
+
 //enum (PascalCase)
 const enum Size { Small = 1, Medium, Large}; 
 //^^enum will start with 0 by default, but can be set manually like 1^^
 //^^the rest will follow order number, if its a string then need to manully set all
 let mySize: Size = Size.Medium;
 
+
+//------------------------------------------------------------------------//
 
 //Functions
 function calculateTax(income: number, taxYear=2022): number { //parameter can set type and return type (eg. number)
@@ -37,6 +42,8 @@ calculateTax(10000, 2022, 1); // If there are 3 parameter is provided, tsc will 
 calculateTax(10000); //If theres only 1 parameter is provided, we can put ? in the function parameter e.g. taxYear?:number
 //this tells tsc that not nessceary that all parameter need to be provided, but can cause problem inside the function
 
+
+//------------------------------------------------------------------------//
 
 //Objects
 let employee: {
@@ -63,6 +70,8 @@ let employee2: Employee = {
 }
 
 
+//------------------------------------------------------------------------//
+
 //Union Type
 function kgToLbs(weight: number | string): number { //putting | in for it to have differnt type, so can be a number or string
     //narrowing, getting the recommendation method for each type
@@ -73,7 +82,7 @@ function kgToLbs(weight: number | string): number { //putting | in for it to hav
 }
 
 
-
+//------------------------------------------------------------------------//
 
 //Intersection Type, combining multiple tempalte together
 type Draggable = { //template 1
@@ -92,6 +101,7 @@ let textBox: UIWidget = { //now this will require both drag and resize method
 }
 
 
+//------------------------------------------------------------------------//
 
 //Literal (exact, specific)
 type Quantity = 50 | 100;
@@ -101,6 +111,7 @@ type Metric = 'cm' | 'inch';
 let metric: Metric = 'cm'; //it works for string as well
 
 
+//------------------------------------------------------------------------//
 
 //Optional chaining
 type Customer = {
