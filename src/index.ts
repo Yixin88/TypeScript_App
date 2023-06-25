@@ -38,7 +38,7 @@ function calculateTax(income: number, taxYear=2022): number { //parameter can se
     return income * 1.3;
 }
 
-calculateTax(10000, 2022, 1); // If there are 3 parameter is provided, tsc will warn you
+// calculateTax(10000, 2022, 1); // If there are 3 parameter is provided, tsc will warn you
 calculateTax(10000); //If theres only 1 parameter is provided, we can put ? in the function parameter e.g. taxYear?:number
 //this tells tsc that not necessary that all parameter need to be provided, but can cause problem inside the function
 

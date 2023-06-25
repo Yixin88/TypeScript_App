@@ -45,4 +45,6 @@ function getCustomer(id) {
 }
 let customer = getCustomer(0);
 console.log(customer === null || customer === void 0 ? void 0 : customer.birthday);
+let log = null;
+log === null || log === void 0 ? void 0 : log('a');
 //# sourceMappingURL=index.js.map
