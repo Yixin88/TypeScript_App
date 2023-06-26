@@ -10,3 +10,15 @@ superHero2.push(5)
 const superHero3: (string|number)[] = [1, '2', 3]  //1st way
 const superHero4: Array<string|number> = [1, '2', 3]  //2nd way
 superHero3.push('four')
+
+//an array of objects
+type superHero5Type = {
+  name: string
+  age: number
+}
+
+const superHero5: superHero5Type[] = []
+superHero5.push({name: 'Yixin', age: 26})
+
+//an array of arrays
+const superHero6: number[][] = [[1, 2, 3],[4, 5, 6]]
