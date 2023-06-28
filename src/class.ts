@@ -7,6 +7,8 @@ class Car {
     this.name = name;
     this.carType = carType;
   }
+
+  // constructor(public name: string, public carType: string) // This is another way to generate the same this. code above, shortcut in ts only
 }
 
 const toyota = new Car('Yaris', 'Hatchback')
