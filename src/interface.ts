@@ -3,9 +3,13 @@ interface Users {
   userId: number
 }
 
-//interface are very similar to type, but it allows extending
+//interface are very similar to type, but it allows extending and adding additional properties later--------------------------------------------
 interface Animal {
   name: string
+}
+
+interface Animal { //I can add on additional properties
+  age?: number
 }
 
 interface Bear extends Animal { //now we can extend it and also saying Bear interface will have the same property as Animal as well as what is on top
@@ -14,7 +18,7 @@ interface Bear extends Animal { //now we can extend it and also saying Bear inte
 
 const bear: Bear = {name: 'Bob', honey: true} 
 
-//Compare to type
+//Compare to type----------------------------------------------------------------------------------------
 type Animal2 = {
   name: string
 }
