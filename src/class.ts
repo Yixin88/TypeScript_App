@@ -7,8 +7,16 @@ class Car {
     this.name = name;
     this.carType = carType;
   }
-
   // constructor(public name: string, public carType: string) // This is another way to generate the same this. code above, shortcut in ts only
+
+  //Getters and Setters
+  get numOfDoors(): number { //with getter, we can just call the instance.numOfDoors instead of instance.numOfDoors()
+    return this.doors;
+  }
+
+  set numOfDoors(num: number) { //with a setter, ts won't allow setting the return type, so leave it as it is
+    this.doors = num;
+  }
 }
 
 const toyota = new Car('Yaris', 'Hatchback')
