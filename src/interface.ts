@@ -28,3 +28,37 @@ type Bear2 = Animal2 & {
 }
 
 const bear2: Bear2 = {name: 'Bob', honey: true} 
+
+
+
+//Another example for interface that used in class-------------------------------------------------------
+interface TakePhoto {
+  cameraMode: string
+  filter: string
+  burst: number
+}
+
+interface Story {
+  createStory(): void
+}
+
+class Instagram implements TakePhoto { //this will follow the TakePhoto interface
+  constructor(
+    public cameraMode: string,
+    public filter: string,
+    public burst: number
+  ) {}
+}
+
+class Youtube implements TakePhoto, Story {
+  constructor(
+    public cameraMode: string,
+    public filter: string,
+    public burst: number,
+    public shorts: string  //but TakePhoto interface don't have shorts, which is allowed, since with interface, you can add more but NEVER less than whats required
+  ) {}
+
+  createStory(): void { //since we also want Story interface, we need to add the methods thats required in here
+    //returns nothing
+  }
+}
