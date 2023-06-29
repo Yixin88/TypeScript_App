@@ -42,7 +42,7 @@ interface Story {
   createStory(): void
 }
 
-class Instagram implements TakePhoto { //this will follow the TakePhoto interface
+class Instagram implements TakePhoto { //this will follow the TakePhoto interface, the keyword IMPLEMENTS is a TS specific kw
   constructor(
     public cameraMode: string,
     public filter: string,
