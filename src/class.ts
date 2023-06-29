@@ -20,3 +20,9 @@ class Car {
 }
 
 const toyota = new Car('Yaris', 'Hatchback')
+
+
+//When it comes to class, we can also declare which variable & methods can be access only within the class or any sub class thats extended
+//Private: Only accessed within the class, no access outside or extended classes
+//Protected: Only accessed within the class and extended class, and NOT in outside of class
+//Public: Can be access both in class and outside of class
